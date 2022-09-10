@@ -76,7 +76,7 @@ def main():
 			match event.type:
 				case pygame.QUIT:
 					pygame.quit()
-					sys.exit()	
+					sys.exit()
 				case pygame.KEYDOWN:
 					match event.key:
 						case pygame.K_d:
