@@ -15,22 +15,22 @@ class Player():
 
         self.image_dir = 'images/player'
         all_images = os.listdir(self.image_dir)
-        self.right = [img.load(f'{self.image_dir}/player1.png'), img.load(f'{self.image_dir}/player2.png'),
-            img.load(f'{self.image_dir}/player3.png'), img.load(f'{self.image_dir}/player4.png'),
-            img.load(f'{self.image_dir}/player5.png'), img.load(f'{self.image_dir}/player6.png'), 
-            img.load(f'{self.image_dir}/player7.png')]
+        self.right = [img.load(f'{self.image_dir}/run_right1.png'), img.load(f'{self.image_dir}/run_right2.png'),
+            img.load(f'{self.image_dir}/run_right3.png'), img.load(f'{self.image_dir}/run_right4.png'),
+            img.load(f'{self.image_dir}/run_right5.png'), img.load(f'{self.image_dir}/run_right6.png'), 
+            img.load(f'{self.image_dir}/run_right7.png')]
         self.run_len = len(self.right)-1
         self.left = [pygame.transform.flip(image, True, False) for image in self.right]
 
-        self.idle_right = [img.load(f'{self.image_dir}/player9.png'), img.load(f'{self.image_dir}/player11.png'),
-            img.load(f'{self.image_dir}/player12.png'), img.load(f'{self.image_dir}/player13.png')]
+        self.idle_right = [img.load(f'{self.image_dir}/idle_right1.png'), img.load(f'{self.image_dir}/idle_right2.png'),
+            img.load(f'{self.image_dir}/idle_right3.png'), img.load(f'{self.image_dir}/idle_right4.png')]
         self.idle_len = len(self.idle_right)-1
         self.idle_left = [pygame.transform.flip(image, True, False) for image in self.idle_right]
         
-        self.jump_right = img.load(f'{self.image_dir}/player10.png')
+        self.jump_right = img.load(f'{self.image_dir}/jump_right1.png')
         self.jump_left = pygame.transform.flip(self.jump_right, True, False)
         
-        self.hitg_right = img.load(f'{self.image_dir}/player14.png')
+        self.hitg_right = img.load(f'{self.image_dir}/hitground_right1.png')
         self.hitg_left = pygame.transform.flip(self.hitg_right, True, False)
 
         self.image_id = 0

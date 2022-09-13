@@ -135,7 +135,7 @@ def main():
 						case 1:
 							mouse_button_up = True
 
-		res.fill((200, 200, 200))
+		res.fill((50, 0, 100))
 
 		if starts['game']:
 			rect_list = mapc.show_map(res, [plyer.rect.x, plyer.rect.y], scroll)
@@ -168,9 +168,9 @@ def main():
 
 
 			plyer.render(res, scroll, dt, key, hit_ground)
-			for rect in rect_list:
-				pygame.draw.rect(res, (255, 0, 0), (rect[0]-scroll[0],
-					rect[1]-scroll[1], rect[2], rect[3]), 1)
+			#for rect in rect_list:
+		#		pygame.draw.rect(res, (255, 0, 0), (rect[0]-scroll[0],
+	#				rect[1]-scroll[1], rect[2], rect[3]), 1)
 			
 		elif starts['menu']:
 			mpos = pygame.mouse.get_pos()
